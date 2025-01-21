@@ -1,8 +1,8 @@
-package dias;
+package days;
 
 import java.util.Scanner;
 
-public class Dia08 {
+public class Day08 {
 
 	public static void main(String[] args) {
 	        Scanner input = new Scanner(System.in);
@@ -14,15 +14,15 @@ public class Dia08 {
 	        	System.out.println("\n========= Menu Interativo =========");
 	        	System.out.println("1 - Mostrar mensagem de boas-vindas");
 	        	System.out.println("2 - Realizar uma soma");
-	        	System.out.println("3 - Realizar uma subtração");
-	        	System.out.println("4 - Realizar uma multiplicação");
-	        	System.out.println("5 - Realizar uma divisão");
+	        	System.out.println("3 - Realizar uma subtraï¿½ï¿½o");
+	        	System.out.println("4 - Realizar uma multiplicaï¿½ï¿½o");
+	        	System.out.println("5 - Realizar uma divisï¿½o");
 	        	System.out.println("9 - Sair");
 	        	System.out.println("===================================\n");
 
 	            
 	            try {
-	                // Ler a opção do usuário
+	                // Ler a opï¿½ï¿½o do usuï¿½rio
 	                opcao = Integer.parseInt(input.nextLine());
 
 	                switch (opcao) {
@@ -30,44 +30,44 @@ public class Dia08 {
 	                        System.out.println("Bem-vindo ao programa!");
 	                        break;
 	                    case 2:
-	                        // Aqui você pode implementar a funcionalidade de soma
-	                        System.out.print("Digite o primeiro número: ");
+	                        // Aqui vocï¿½ pode implementar a funcionalidade de soma
+	                        System.out.print("Digite o primeiro nï¿½mero: ");
 	                        numero1 = Integer.parseInt(input.nextLine());
 
-	                        System.out.print("Digite o segundo número: ");
+	                        System.out.print("Digite o segundo nï¿½mero: ");
 	                        numero2 = Integer.parseInt(input.nextLine());
 
 	                        exibirResultado("+", numero1, numero2, somar(numero1, numero2));
 	                        break;
 	                    case 3:
-	                        // Aqui você pode implementar a funcionalidade de soma
-	                        System.out.print("Digite o primeiro número: ");
+	                        // Aqui vocï¿½ pode implementar a funcionalidade de soma
+	                        System.out.print("Digite o primeiro nï¿½mero: ");
 	                        numero1 = Integer.parseInt(input.nextLine());
 
-	                        System.out.print("Digite o segundo número: ");
+	                        System.out.print("Digite o segundo nï¿½mero: ");
 	                        numero2 = Integer.parseInt(input.nextLine());
 
 	                        exibirResultado("-", numero1, numero2, subtrair(numero1, numero2));
 	                        break;
 	                    case 4:
-	                        // Aqui você pode implementar a funcionalidade de soma
-	                        System.out.print("Digite o primeiro número: ");
+	                        // Aqui vocï¿½ pode implementar a funcionalidade de soma
+	                        System.out.print("Digite o primeiro nï¿½mero: ");
 	                        numero1 = Integer.parseInt(input.nextLine());
 
-	                        System.out.print("Digite o segundo número: ");
+	                        System.out.print("Digite o segundo nï¿½mero: ");
 	                        numero2 = Integer.parseInt(input.nextLine());
 
 	                        exibirResultado("*", numero1, numero2, multiplicar(numero1, numero2));
 	                        break;
 	                    case 5:
-	                        System.out.print("Digite o primeiro número: ");
+	                        System.out.print("Digite o primeiro nï¿½mero: ");
 	                        numero1 = Integer.parseInt(input.nextLine());
 
-	                        System.out.print("Digite o segundo número: ");
+	                        System.out.print("Digite o segundo nï¿½mero: ");
 	                        numero2 = Integer.parseInt(input.nextLine());
 
 	                        if (numero2 == 0) {
-	                            System.out.println("Erro: Não é possível dividir por zero.");
+	                            System.out.println("Erro: Nï¿½o ï¿½ possï¿½vel dividir por zero.");
 	                        } else {
 	                            exibirResultado("/", numero1, numero2, dividir(numero1, numero2));
 	                        }
@@ -76,28 +76,28 @@ public class Dia08 {
 	                        System.out.print("Tem certeza que deseja sair? (S/N): ");
 	                        String confirmacao = input.nextLine().trim().toUpperCase();
 	                        if (confirmacao.equals("S")) {
-	                            System.out.println("Programa encerrado. Até logo!");
+	                            System.out.println("Programa encerrado. Atï¿½ logo!");
 	                        } else {
 	                            opcao = 0; // Reinicia o menu
 	                        }
 	                        break;
 
 	                    default:
-	                        System.out.println("Opção inválida. Por favor, escolha uma opção válida.");
+	                        System.out.println("Opï¿½ï¿½o invï¿½lida. Por favor, escolha uma opï¿½ï¿½o vï¿½lida.");
 	                        break;
 	                }
 	            } catch (NumberFormatException e) {
-	                System.out.println("Erro: Por favor, insira um número válido.");
+	                System.out.println("Erro: Por favor, insira um nï¿½mero vï¿½lido.");
 	            }
 	            
-	            System.out.println(); // Espaço para organizar a saída
+	            System.out.println(); // Espaï¿½o para organizar a saï¿½da
 	        }
 
 	        input.close();
 	    }
 
 	
-	// Métodos para operações matemáticas
+	// Mï¿½todos para operaï¿½ï¿½es matemï¿½ticas
 	private static double somar(double valorA, double valorB) {
 		return valorA + valorB;
 	}
@@ -112,12 +112,12 @@ public class Dia08 {
 	
 	private static double dividir(double valorA, double valorB) {
 		if(valorB == 0) {
-			throw new ArithmeticException("Erro: Divisão por zero não é permitida.");
+			throw new ArithmeticException("Erro: Divisï¿½o por zero nï¿½o ï¿½ permitida.");
 		}
 		return valorA / valorB ;
 	}
 	
-	// Método genérico para exibir os resultados
+	// Mï¿½todo genï¿½rico para exibir os resultados
     private static void exibirResultado(String operacao, double valorA, double valorB, double resultado) {
     	System.out.printf("O resultado de %.2f %s %.2f = %.2f%n", valorA, operacao, valorB, resultado);
     }

@@ -1,20 +1,19 @@
-package dias;
+package days;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
-public class Dia10 {
+public class Day10 {
 
 	public static void main(String[] args) {
 		try (Scanner input = new Scanner(System.in)) {
 		    double tabuada;
 
 		    while (true) {
-		        System.out.println("Digite um número positivo para calcular a tabuada (ou digite 'sair' para encerrar):");
+		        System.out.println("Digite um nï¿½mero positivo para calcular a tabuada (ou digite 'sair' para encerrar):");
 		        String entrada = input.nextLine();
 
 		        if (entrada.equalsIgnoreCase("sair")) {
-		            System.out.println("Programa encerrado. Até logo!");
+		            System.out.println("Programa encerrado. Atï¿½ logo!");
 		            break;
 		        }
 
@@ -22,7 +21,7 @@ public class Dia10 {
 		            tabuada = Double.parseDouble(entrada);
 
 		            if (tabuada < 0) {
-		                System.out.println("Erro: Por favor, insira um número positivo.");
+		                System.out.println("Erro: Por favor, insira um nï¿½mero positivo.");
 		                continue;
 		            }
 
@@ -31,7 +30,7 @@ public class Dia10 {
 		                System.out.printf("%.2f x %d = %.2f%n", tabuada, i, tabuada * i);
 		            }
 		        } catch (NumberFormatException e) {
-		            System.out.println("Erro: Entrada inválida. Insira um número ou 'sair'.");
+		            System.out.println("Erro: Entrada invï¿½lida. Insira um nï¿½mero ou 'sair'.");
 		        }
 		    }
 		}

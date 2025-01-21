@@ -1,8 +1,8 @@
-package dias;
+package days;
 
 import java.util.Scanner;
 
-public class Dia04 {
+public class Day04 {
 
 	public static void main(String[] args) {
 		Double valorA, valorB;	
@@ -15,7 +15,7 @@ public class Dia04 {
 			System.out.println("Digite o segundo valor:");
 			valorB = Double.parseDouble(input.nextLine());
 			
-			System.out.println("Escolha uma operação (+, -, *, /):");
+			System.out.println("Escolha uma operaï¿½ï¿½o (+, -, *, /):");
 			operacao = input.nextLine();
 			
 			switch(operacao){
@@ -32,17 +32,17 @@ public class Dia04 {
 				exibirResultado(operacao, valorA, valorB, dividir(valorA, valorB));
 				break;	
 			default:
-				System.out.println("Operação inválida. Escolha apenas entre +, -, * ou /.");
+				System.out.println("Operaï¿½ï¿½o invï¿½lida. Escolha apenas entre +, -, * ou /.");
 			}
 			input.close();
 		} catch (NumberFormatException e ) {
-			System.out.println("Por favor, informe um número válido.");
+			System.out.println("Por favor, informe um nï¿½mero vï¿½lido.");
 		} catch (ArithmeticException e) {
 			System.out.println(e.getMessage());
 		}
 	}
 	
-	// Métodos para operações matemáticas
+	// Mï¿½todos para operaï¿½ï¿½es matemï¿½ticas
 	private static double somar(double valorA, double valorB) {
 		return valorA + valorB;
 	}
@@ -57,14 +57,14 @@ public class Dia04 {
 	
 	private static double dividir(double valorA, double valorB) {
 		if(valorB == 0) {
-			throw new ArithmeticException("Erro: Divisão por zero não é permitida.");
+			throw new ArithmeticException("Erro: Divisï¿½o por zero nï¿½o ï¿½ permitida.");
 		}
 		return valorA / valorB ;
 	}
 	
-	// Método genérico para exibir os resultados
+	// Mï¿½todo genï¿½rico para exibir os resultados
     private static void exibirResultado(String operacao, double valorA, double valorB, double resultado) {
-    	System.out.printf("O resultado de %.2f %s %.2f é %.2f%n", valorA, operacao, valorB, resultado);
+    	System.out.printf("O resultado de %.2f %s %.2f ï¿½ %.2f%n", valorA, operacao, valorB, resultado);
     }
 
 }

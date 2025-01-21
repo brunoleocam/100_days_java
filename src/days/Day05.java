@@ -1,18 +1,18 @@
-package dias;
+package days;
 
 import java.util.Scanner;
 
-public class Dia05 {
+public class Day05 {
 
 	public static void main(String[] args) {
 		int numero, soma = 0;
 		
 		try (Scanner input = new Scanner(System.in)) {
-			System.out.println("Digite um número inteiro positivo:");
+			System.out.println("Digite um nï¿½mero inteiro positivo:");
 			numero = Integer.parseInt(input.nextLine());
 			
 			if (numero <= 0) {
-	            System.out.println("Por favor, informe um número maior que zero.");
+	            System.out.println("Por favor, informe um nï¿½mero maior que zero.");
 	            return;
 	        }
 			
@@ -25,7 +25,7 @@ public class Dia05 {
 			
 			input.close();
 		} catch (NumberFormatException e ) {
-			System.out.println("Erro: Por favor, informe um número inteiro válido.");
+			System.out.println("Erro: Por favor, informe um nï¿½mero inteiro vï¿½lido.");
 		}
 
 	}

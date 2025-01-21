@@ -1,8 +1,8 @@
-package dias;
+package days;
 
 import java.util.Scanner;
 
-public class Dia01 {
+public class Day01 {
 
 	public static void main(String[] args) {
 		System.out.println("Hello, Java!");

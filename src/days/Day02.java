@@ -1,8 +1,8 @@
-package dias;
+package days;
 
 import java.util.Scanner;
 
-public class Dia02 {
+public class Day02 {
 
 	public static void main(String[] args) {
 		Double valorA, valorB;		
@@ -10,18 +10,18 @@ public class Dia02 {
 		Scanner input = new Scanner(System.in);
 				
 		try {
-			System.out.println("Digite o primeiro número:");
+			System.out.println("Digite o primeiro nï¿½mero:");
 			valorA = Double.parseDouble(input.nextLine());
 			
-			System.out.println("Digite o segundo número:");
+			System.out.println("Digite o segundo nï¿½mero:");
 			valorB = Double.parseDouble(input.nextLine());
 			
 					
 			// Exibe os resultados
             exibirResultado("soma", valorA, valorB, somar(valorA, valorB));
-            exibirResultado("subtração", valorA, valorB, subtrair(valorA, valorB));
-            exibirResultado("multiplicação", valorA, valorB, multiplicar(valorA, valorB));
-            exibirResultado("divisão", valorA, valorB, dividir(valorA, valorB));
+            exibirResultado("subtraï¿½ï¿½o", valorA, valorB, subtrair(valorA, valorB));
+            exibirResultado("multiplicaï¿½ï¿½o", valorA, valorB, multiplicar(valorA, valorB));
+            exibirResultado("divisï¿½o", valorA, valorB, dividir(valorA, valorB));
 			
 		} catch (ArithmeticException e) {
 			System.out.println(e.getMessage());
@@ -30,7 +30,7 @@ public class Dia02 {
 
 	}
 	
-	// Métodos para operações matemáticas
+	// Mï¿½todos para operaï¿½ï¿½es matemï¿½ticas
 	private static double somar(double valorA, double valorB) {
 		return valorA + valorB;
 	}
@@ -45,14 +45,14 @@ public class Dia02 {
 	
 	private static double dividir(double valorA, double valorB) {
 		if(valorB == 0) {
-			throw new ArithmeticException("Divisão por zero não é permitida");
+			throw new ArithmeticException("Divisï¿½o por zero nï¿½o ï¿½ permitida");
 		}
 		return valorA / valorB ;
 	}
 	
-	// Método genérico para exibir os resultados
+	// Mï¿½todo genï¿½rico para exibir os resultados
     private static void exibirResultado(String operacao, double valorA, double valorB, double resultado) {
-        System.out.printf("O resultado da %s de %.2f e %.2f é: %.2f%n", operacao, valorA, valorB, resultado);
+        System.out.printf("O resultado da %s de %.2f e %.2f ï¿½: %.2f%n", operacao, valorA, valorB, resultado);
     }
 
 }
